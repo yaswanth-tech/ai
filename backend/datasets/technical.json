@@ -4,6 +4,8 @@
     "questions": [
       {
         "id": "java_01",
+
+        "difficulty": "easy",
         "question": "Explain the difference between JDK, JRE, and JVM.",
         "expected_keywords": [
           "development kit",
@@ -20,6 +22,8 @@
       },
       {
         "id": "java_02",
+
+        "difficulty": "medium",
         "question": "What are the main principles of OOP?",
         "expected_keywords": [
           "encapsulation",
@@ -39,6 +43,8 @@
       },
       {
         "id": "java_03",
+
+        "difficulty": "hard",
         "question": "Explain the difference between an Interface and an Abstract Class.",
         "expected_keywords": [
           "multiple inheritance",
@@ -56,6 +62,8 @@
       },
       {
         "id": "java_04",
+
+        "difficulty": "easy",
         "question": "How does Garbage Collection work in Java?",
         "expected_keywords": [
           "heap",
@@ -73,6 +81,8 @@
       },
       {
         "id": "java_05",
+
+        "difficulty": "medium",
         "question": "What is the difference between '==' and '.equals()'?",
         "expected_keywords": [
           "reference",
@@ -90,6 +100,8 @@
       },
       {
         "id": "java_06",
+
+        "difficulty": "hard",
         "question": "Explain the contract between hashCode() and equals().",
         "expected_keywords": [
           "hash collision",
@@ -107,6 +119,8 @@
       },
       {
         "id": "java_07",
+
+        "difficulty": "easy",
         "question": "What are the different scopes of a bean in Spring?",
         "expected_keywords": [
           "singleton",
@@ -124,6 +138,8 @@
       },
       {
         "id": "java_08",
+
+        "difficulty": "medium",
         "question": "Explain Dependency Injection in Spring.",
         "expected_keywords": [
           "inversion of control",
@@ -141,6 +157,8 @@
       },
       {
         "id": "java_09",
+
+        "difficulty": "hard",
         "question": "Difference between Checked and Unchecked Exceptions.",
         "expected_keywords": [
           "compile time",
@@ -158,6 +176,8 @@
       },
       {
         "id": "java_10",
+
+        "difficulty": "easy",
         "question": "What is the result of String Immutability in Java?",
         "expected_keywords": [
           "string pool",
@@ -175,6 +195,8 @@
       },
       {
         "id": "java_11",
+
+        "difficulty": "medium",
         "question": "Explain the keywords final, finally, and finalize.",
         "expected_keywords": [
           "constant",
@@ -193,6 +215,8 @@
       },
       {
         "id": "java_12",
+
+        "difficulty": "hard",
         "question": "How does a HashMap work internally?",
         "expected_keywords": [
           "array",
@@ -211,6 +235,8 @@
       },
       {
         "id": "java_13",
+
+        "difficulty": "easy",
         "question": "What is the Volatile keyword used for?",
         "expected_keywords": [
           "thread safety",
@@ -228,6 +254,8 @@
       },
       {
         "id": "java_14",
+
+        "difficulty": "medium",
         "question": "Explain RESTful API constraints.",
         "expected_keywords": [
           "stateless",
@@ -245,6 +273,8 @@
       },
       {
         "id": "java_15",
+
+        "difficulty": "hard",
         "question": "What is Hibernate and JPA?",
         "expected_keywords": [
           "orm",
@@ -261,6 +291,8 @@
       },
       {
         "id": "java_16",
+
+        "difficulty": "easy",
         "question": "Explain the Spring Boot Auto Configuration.",
         "expected_keywords": [
           "classpath",
@@ -278,6 +310,8 @@
       },
       {
         "id": "java_17",
+
+        "difficulty": "medium",
         "question": "Difference between StringBuffer and StringBuilder.",
         "expected_keywords": [
           "synchronized",
@@ -295,6 +329,8 @@
       },
       {
         "id": "java_18",
+
+        "difficulty": "hard",
         "question": "What is Method Overloading vs Overriding?",
         "expected_keywords": [
           "signature",
@@ -313,6 +349,8 @@
       },
       {
         "id": "java_19",
+
+        "difficulty": "easy",
         "question": "Explain the concept of Microservices.",
         "expected_keywords": [
           "decoupled",
@@ -330,6 +368,8 @@
       },
       {
         "id": "java_20",
+
+        "difficulty": "medium",
         "question": "How to handle database transactions in Spring?",
         "expected_keywords": [
           "@transational",
@@ -347,6 +387,8 @@
       },
       {
         "id": "java_21",
+
+        "difficulty": "hard",
         "question": "What is the purpose of Maven/Gradle?",
         "expected_keywords": [
           "build tool",
@@ -364,6 +406,8 @@
       },
       {
         "id": "java_22",
+
+        "difficulty": "easy",
         "question": "Explain the Singleton Design Pattern.",
         "expected_keywords": [
           "one instance",
@@ -381,6 +425,8 @@
       },
       {
         "id": "java_23",
+
+        "difficulty": "medium",
         "question": "What is the Java Stream API?",
         "expected_keywords": [
           "functional",
@@ -398,6 +444,8 @@
       },
       {
         "id": "java_24",
+
+        "difficulty": "hard",
         "question": "Explain SQL Injection and how to prevent it in Java.",
         "expected_keywords": [
           "prepared statement",
@@ -415,6 +463,8 @@
       },
       {
         "id": "java_25",
+
+        "difficulty": "easy",
         "question": "What is a Java ClassLoader?",
         "expected_keywords": [
           "load classes",
@@ -436,6 +486,8 @@
     "questions": [
       {
         "id": "py_01",
+
+        "difficulty": "medium",
         "question": "Explain the difference between a List and a Tuple.",
         "expected_keywords": [
           "mutable",
@@ -453,6 +505,8 @@
       },
       {
         "id": "py_02",
+
+        "difficulty": "hard",
         "question": "What is a Decorator in Python?",
         "expected_keywords": [
           "keyword",
@@ -470,6 +524,8 @@
       },
       {
         "id": "py_03",
+
+        "difficulty": "easy",
         "question": "Explain List Comprehension.",
         "expected_keywords": [
           "concise",
@@ -487,6 +543,8 @@
       },
       {
         "id": "py_04",
+
+        "difficulty": "medium",
         "question": "What is the difference between deep copy and shallow copy?",
         "expected_keywords": [
           "reference",
@@ -504,6 +562,8 @@
       },
       {
         "id": "py_05",
+
+        "difficulty": "hard",
         "question": "How does Python handle memory management?",
         "expected_keywords": [
           "garbage collection",
@@ -520,6 +580,8 @@
       },
       {
         "id": "py_06",
+
+        "difficulty": "easy",
         "question": "What are *args and **kwargs?",
         "expected_keywords": [
           "variable arguments",
@@ -537,6 +599,8 @@
       },
       {
         "id": "py_07",
+
+        "difficulty": "medium",
         "question": "Explain the Global Interpreter Lock (GIL).",
         "expected_keywords": [
           "thread",
@@ -554,6 +618,8 @@
       },
       {
         "id": "py_08",
+
+        "difficulty": "hard",
         "question": "What is a Generator?",
         "expected_keywords": [
           "yield",
@@ -571,6 +637,8 @@
       },
       {
         "id": "py_09",
+
+        "difficulty": "easy",
         "question": "Difference between 'is' and '=='",
         "expected_keywords": [
           "identity",
@@ -588,6 +656,8 @@
       },
       {
         "id": "py_10",
+
+        "difficulty": "medium",
         "question": "What is a Lambda function?",
         "expected_keywords": [
           "anonymous",
@@ -604,6 +674,8 @@
       },
       {
         "id": "py_11",
+
+        "difficulty": "hard",
         "question": "Explain Exception Handling in Python.",
         "expected_keywords": [
           "try",
@@ -621,6 +693,8 @@
       },
       {
         "id": "py_12",
+
+        "difficulty": "easy",
         "question": "What is init in Python classes?",
         "expected_keywords": [
           "constructor",
@@ -638,6 +712,8 @@
       },
       {
         "id": "py_13",
+
+        "difficulty": "medium",
         "question": "Explain slicing in Python.",
         "expected_keywords": [
           "start",
@@ -655,6 +731,8 @@
       },
       {
         "id": "py_14",
+
+        "difficulty": "hard",
         "question": "What are Python modules and packages?",
         "expected_keywords": [
           "file",
@@ -672,6 +750,8 @@
       },
       {
         "id": "py_15",
+
+        "difficulty": "easy",
         "question": "Difference between range and xrange (Python 2 vs 3).",
         "expected_keywords": [
           "generator",
@@ -689,6 +769,8 @@
       },
       {
         "id": "py_16",
+
+        "difficulty": "medium",
         "question": "What is Pickling and Unpickling?",
         "expected_keywords": [
           "serialization",
@@ -705,6 +787,8 @@
       },
       {
         "id": "py_17",
+
+        "difficulty": "hard",
         "question": "Explain the map function.",
         "expected_keywords": [
           "apply",
@@ -722,6 +806,8 @@
       },
       {
         "id": "py_18",
+
+        "difficulty": "easy",
         "question": "What is a Set in Python?",
         "expected_keywords": [
           "unique",
@@ -738,6 +824,8 @@
       },
       {
         "id": "py_19",
+
+        "difficulty": "medium",
         "question": "Explain the 'self' keyword.",
         "expected_keywords": [
           "instance",
@@ -755,6 +843,8 @@
       },
       {
         "id": "py_20",
+
+        "difficulty": "hard",
         "question": "What is the purpose of docstrings?",
         "expected_keywords": [
           "documentation",
@@ -771,6 +861,8 @@
       },
       {
         "id": "py_21",
+
+        "difficulty": "easy",
         "question": "Explain how to open a file safely.",
         "expected_keywords": [
           "with statement",
@@ -787,6 +879,8 @@
       },
       {
         "id": "py_22",
+
+        "difficulty": "medium",
         "question": "What is Virtualenv?",
         "expected_keywords": [
           "dependencies",
@@ -804,6 +898,8 @@
       },
       {
         "id": "py_23",
+
+        "difficulty": "hard",
         "question": "Explain Multiple Inheritance in Python.",
         "expected_keywords": [
           "parent class",
@@ -820,6 +916,8 @@
       },
       {
         "id": "py_24",
+
+        "difficulty": "easy",
         "question": "What is the Pass statement?",
         "expected_keywords": [
           "null",
@@ -836,6 +934,8 @@
       },
       {
         "id": "py_25",
+
+        "difficulty": "medium",
         "question": "Explain Flask vs Django.",
         "expected_keywords": [
           "microframework",
@@ -858,6 +958,8 @@
     "questions": [
       {
         "id": "fe_01",
+
+        "difficulty": "hard",
         "question": "Explain the concept of Virtual DOM in React.",
         "expected_keywords": [
           "copy",
@@ -875,6 +977,8 @@
       },
       {
         "id": "fe_02",
+
+        "difficulty": "easy",
         "question": "What is the difference between var, let, and const?",
         "expected_keywords": [
           "scope",
@@ -892,6 +996,8 @@
       },
       {
         "id": "fe_03",
+
+        "difficulty": "medium",
         "question": "Explain Closures in JavaScript.",
         "expected_keywords": [
           "scope",
@@ -909,6 +1015,8 @@
       },
       {
         "id": "fe_04",
+
+        "difficulty": "hard",
         "question": "What is the Box Model in CSS?",
         "expected_keywords": [
           "margin",
@@ -928,6 +1036,8 @@
       },
       {
         "id": "fe_05",
+
+        "difficulty": "easy",
         "question": "Explain Event Bubbling and Capturing.",
         "expected_keywords": [
           "propagation",
@@ -945,6 +1055,8 @@
       },
       {
         "id": "fe_06",
+
+        "difficulty": "medium",
         "question": "What are Promises in JavaScript?",
         "expected_keywords": [
           "asynchronous",
@@ -962,6 +1074,8 @@
       },
       {
         "id": "fe_07",
+
+        "difficulty": "hard",
         "question": "Difference between LocalStorage, SessionStorage, and Cookies.",
         "expected_keywords": [
           "persistence",
@@ -979,6 +1093,8 @@
       },
       {
         "id": "fe_08",
+
+        "difficulty": "easy",
         "question": "What is Flexbox?",
         "expected_keywords": [
           "layout",
@@ -996,6 +1112,8 @@
       },
       {
         "id": "fe_09",
+
+        "difficulty": "medium",
         "question": "Explain CSS Grid.",
         "expected_keywords": [
           "two dimensional",
@@ -1012,6 +1130,8 @@
       },
       {
         "id": "fe_10",
+
+        "difficulty": "hard",
         "question": "What is Hoisting in JavaScript?",
         "expected_keywords": [
           "declaration",
@@ -1029,6 +1149,8 @@
       },
       {
         "id": "fe_11",
+
+        "difficulty": "easy",
         "question": "Explain the 'this' keyword.",
         "expected_keywords": [
           "context",
@@ -1045,6 +1167,8 @@
       },
       {
         "id": "fe_12",
+
+        "difficulty": "medium",
         "question": "React Class vs Functional Components.",
         "expected_keywords": [
           "hooks",
@@ -1062,6 +1186,8 @@
       },
       {
         "id": "fe_13",
+
+        "difficulty": "hard",
         "question": "What is Redux?",
         "expected_keywords": [
           "state management",
@@ -1079,6 +1205,8 @@
       },
       {
         "id": "fe_14",
+
+        "difficulty": "easy",
         "question": "Explain Semantic HTML.",
         "expected_keywords": [
           "meaning",
@@ -1096,6 +1224,8 @@
       },
       {
         "id": "fe_15",
+
+        "difficulty": "medium",
         "question": "What is the UseEffect hook?",
         "expected_keywords": [
           "side effects",
@@ -1112,6 +1242,8 @@
       },
       {
         "id": "fe_16",
+
+        "difficulty": "hard",
         "question": "Explain CSS Specificity.",
         "expected_keywords": [
           "rank",
@@ -1129,6 +1261,8 @@
       },
       {
         "id": "fe_17",
+
+        "difficulty": "easy",
         "question": "What is CORS?",
         "expected_keywords": [
           "cross origin",
@@ -1146,6 +1280,8 @@
       },
       {
         "id": "fe_18",
+
+        "difficulty": "medium",
         "question": "Explain Async/Await.",
         "expected_keywords": [
           "syntax",
@@ -1163,6 +1299,8 @@
       },
       {
         "id": "fe_19",
+
+        "difficulty": "hard",
         "question": "What is Webpack?",
         "expected_keywords": [
           "bundler",
@@ -1179,6 +1317,8 @@
       },
       {
         "id": "fe_20",
+
+        "difficulty": "easy",
         "question": "Difference between Null and Undefined.",
         "expected_keywords": [
           "assignment",
@@ -1196,6 +1336,8 @@
       },
       {
         "id": "fe_21",
+
+        "difficulty": "medium",
         "question": "Explain Responsive Design.",
         "expected_keywords": [
           "media queries",
@@ -1212,6 +1354,8 @@
       },
       {
         "id": "fe_22",
+
+        "difficulty": "hard",
         "question": "What is TypeScript?",
         "expected_keywords": [
           "superset",
@@ -1229,6 +1373,8 @@
       },
       {
         "id": "fe_23",
+
+        "difficulty": "easy",
         "question": "Explain the Event Loop.",
         "expected_keywords": [
           "stack",
@@ -1246,6 +1392,8 @@
       },
       {
         "id": "fe_24",
+
+        "difficulty": "medium",
         "question": "What is Server-Side Rendering (SSR)?",
         "expected_keywords": [
           "server",
@@ -1263,6 +1411,8 @@
       },
       {
         "id": "fe_25",
+
+        "difficulty": "hard",
         "question": "Explain Prototypal Inheritance.",
         "expected_keywords": [
           "prototype chain",
@@ -1284,6 +1434,8 @@
     "questions": [
       {
         "id": "fs_01",
+
+        "difficulty": "easy",
         "question": "Explain the difference between Monolithic and Microservices architecture.",
         "expected_keywords": [
           "scalability",
@@ -1297,6 +1449,8 @@
       },
       {
         "id": "fs_02",
+
+        "difficulty": "medium",
         "question": "What is the role of a Load Balancer in a full-stack application?",
         "expected_keywords": [
           "traffic",
@@ -1310,6 +1464,8 @@
       },
       {
         "id": "fs_03",
+
+        "difficulty": "hard",
         "question": "Explain the concept of MVC (Model-View-Controller).",
         "expected_keywords": [
           "separation of concerns",
@@ -1323,6 +1479,8 @@
       },
       {
         "id": "fs_04",
+
+        "difficulty": "easy",
         "question": "What are the benefits of using Docker for development and deployment?",
         "expected_keywords": [
           "container",
@@ -1336,6 +1494,8 @@
       },
       {
         "id": "fs_05",
+
+        "difficulty": "medium",
         "question": "How do you handle authentication and authorization in a full-stack app?",
         "expected_keywords": [
           "jwt",
@@ -1354,6 +1514,8 @@
     "questions": [
       {
         "id": "da_01",
+
+        "difficulty": "hard",
         "question": "Explain the difference between SQL and NoSQL databases.",
         "expected_keywords": [
           "relational",
@@ -1367,6 +1529,8 @@
       },
       {
         "id": "da_02",
+
+        "difficulty": "easy",
         "question": "What is Data Cleaning and why is it important?",
         "expected_keywords": [
           "incomplete",
@@ -1380,6 +1544,8 @@
       },
       {
         "id": "da_03",
+
+        "difficulty": "medium",
         "question": "Explain the difference between Mean, Median, and Mode.",
         "expected_keywords": [
           "average",
@@ -1393,6 +1559,8 @@
       },
       {
         "id": "da_04",
+
+        "difficulty": "hard",
         "question": "What is a Joins in SQL and its types?",
         "expected_keywords": [
           "inner",
@@ -1406,6 +1574,8 @@
       },
       {
         "id": "da_05",
+
+        "difficulty": "easy",
         "question": "Explain the concept of Data Visualization.",
         "expected_keywords": [
           "charts",

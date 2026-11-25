@@ -15,6 +15,18 @@ enum ImprovementStatus {
   REJECTED
 }
 
+enum InterviewEndReason {
+  COMPLETED
+  TIME_UP
+  USER_ENDED
+}
+
+enum QuestionAttemptStatus {
+  ANSWERED
+  SKIPPED
+  UNANSWERED
+}
+
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
@@ -40,17 +52,29 @@ model User {
 }
 
 model InterviewSession {
-  id          String   @id @default(uuid())
-  userId      String?  // Optional: Link to a user system if needed later
-  type        String   // 'TECHNICAL' or 'HR'
-  role        String   // e.g., 'Java Backend', 'Behavioral'
-  totalScore  Float    @default(0.0)
-  status      String   @default("IN_PROGRESS") // 'IN_PROGRESS', 'COMPLETED'
-  currentStage String  @default("GREETING")   // GREETING, READINESS, INTRO, MAIN, CLOSING
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  
-  attempts    QuestionAttempt[]
+  id                      String   @id @default(uuid())
+  userId                  String?
+  type                    String
+  role                    String
+  experience              String   @default("fresher")
+  difficulty              String   @default("medium")
+  durationMinutes         Int      @default(10)
+  plannedQuestionCount    Int?
+  plannedQuestions        Json     @default("[]")
+  currentQuestionIndex    Int      @default(0)
+  currentQuestionStartedAt DateTime?
+  startedAt               DateTime?
+  deadlineAt              DateTime?
+  completedAt             DateTime?
+  activityLoggedAt        DateTime?
+  endReason               InterviewEndReason?
+  totalScore              Float    @default(0.0)
+  status                  String   @default("READY")
+  currentStage            String   @default("GREETING")
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+
+  attempts                QuestionAttempt[]
 }
 
 model QuestionAttempt {
@@ -61,11 +85,14 @@ model QuestionAttempt {
   questionId      String
   questionText    String
   userAnswer      String
+  exampleAnswer   String?  @db.Text
   matchedKeywords String[] // Array of strings supported by PostgreSQL
   missingKeywords String[]
   score           Float
   feedback        String
-  
+  timeTakenSeconds Int     @default(0)
+  status          QuestionAttemptStatus @default(ANSWERED)
+
   createdAt       DateTime @default(now())
 }
 

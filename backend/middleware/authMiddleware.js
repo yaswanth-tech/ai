@@ -15,9 +15,15 @@ async function requireAuth(req, res, next) {
   try {
     const secret = getJwtSecret();
     if (!secret) {
-      return res.status(500).json({
+      return res.status(503).json({
         success: false,
         error: 'Server authentication is not configured. Set JWT_SECRET in backend/.env.'
+      });
+    }
+    if (!process.env.DATABASE_URL) {
+      return res.status(503).json({
+        success: false,
+        error: 'Database configuration is missing. Set DATABASE_URL in backend/.env.'
       });
     }
 

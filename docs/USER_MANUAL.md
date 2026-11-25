@@ -100,7 +100,19 @@ Review suggested text before accepting. Rewrites are checked against extracted s
 
 ---
 
-## 9. Tracking Progress on the Dashboard
+## 9. Practicing with a Mock Interview
+
+1. Open **Mock Interview** from the dashboard and choose the interview type, target role (for technical practice), experience level, difficulty and 10-, 20- or 30-minute duration.
+2. Review the live summary. The selected duration determines 5, 8 or 12 questions, including the introduction.
+3. In the lobby, optionally test your microphone and speakers, review the rules, then select **I’m ready — enter full screen**. The clock begins when the interview starts.
+4. Answer by speaking or typing. Use **Re-record** once for a question, **Skip** to move on, or **End** to finish early. The timer continues if you leave full screen or refresh.
+5. Review the report for the overall score, time used, answered/skipped/unanswered counts, strengths, focus areas and feedback/example answers for each question. Retake the interview, print the report or return to the dashboard.
+
+Speech recognition depends on browser support and microphone permission. Typed answers remain available as a fallback.
+
+---
+
+## 10. Tracking Progress on the Dashboard
 
 1. Click **Dashboard** in the sidebar (or open `dashboard.html`).
 2. Review your holistic career preparation:

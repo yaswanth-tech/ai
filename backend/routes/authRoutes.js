@@ -6,6 +6,43 @@ const prisma = require('../utils/prismaClient');
 const { requireAuth, getJwtSecret } = require('../middleware/authMiddleware');
 const { authLimiter } = require('../middleware/rateLimiter');
 
+function getAuthConfigurationError() {
+  if (!process.env.DATABASE_URL) {
+    return 'Database configuration is missing. Set DATABASE_URL in backend/.env.';
+  }
+  if (!getJwtSecret()) {
+    return 'Server authentication is not configured. Set JWT_SECRET in backend/.env.';
+  }
+  return null;
+}
+
+function getAuthFailure(error, fallbackError) {
+  const code = error?.errorCode || error?.code;
+  if (code === 'P2002') {
+    return { status: 409, error: 'An account with this email already exists.' };
+  }
+
+  const databaseConnectionCodes = new Set([
+    'P1000', 'P1001', 'P1002', 'P1003', 'P1008', 'P1010', 'P1011',
+    'P1013', 'P1017', 'P2024'
+  ]);
+  if (error?.name === 'PrismaClientInitializationError' || databaseConnectionCodes.has(code)) {
+    return {
+      status: 503,
+      error: 'Database is unavailable. Check DATABASE_URL, PostgreSQL availability, and network access.'
+    };
+  }
+
+  if (code === 'P2021' || code === 'P2022') {
+    return {
+      status: 503,
+      error: 'The database schema is not up to date. Apply the reviewed Prisma migrations.'
+    };
+  }
+
+  return { status: 500, error: fallbackError };
+}
+
 // Helper to generate JWT token (expires in 7 days)
 function generateToken(user) {
   const secret = getJwtSecret();
@@ -42,6 +79,9 @@ router.post('/signup', authLimiter, async (req, res) => {
     if (!password || typeof password !== 'string' || password.length < 8) {
       return res.status(400).json({ success: false, error: 'Password must be at least 8 characters.' });
     }
+
+    const configurationError = getAuthConfigurationError();
+    if (configurationError) return res.status(503).json({ success: false, error: configurationError });
 
     const normalizedEmail = email.trim().toLowerCase();
 
@@ -81,8 +121,13 @@ router.post('/signup', authLimiter, async (req, res) => {
       user
     });
   } catch (error) {
-    console.error(JSON.stringify({ event: 'signup_failed', status: error.status || 500 }));
-    res.status(500).json({ success: false, error: 'Failed to create account.' });
+    const failure = getAuthFailure(error, 'Failed to create account.');
+    console.error(JSON.stringify({
+      event: 'signup_failed',
+      status: failure.status,
+      errorCode: error?.errorCode || error?.code
+    }));
+    res.status(failure.status).json({ success: false, error: failure.error });
   }
 });
 
@@ -99,6 +144,9 @@ router.post('/login', authLimiter, async (req, res) => {
     if (!identifier || !password) {
       return res.status(400).json({ success: false, error: 'Email/username and password are required.' });
     }
+
+    const configurationError = getAuthConfigurationError();
+    if (configurationError) return res.status(503).json({ success: false, error: configurationError });
 
     // Prefer email lookup for deterministic behaviour
     let user = await prisma.user.findUnique({
@@ -142,8 +190,13 @@ router.post('/login', authLimiter, async (req, res) => {
       user: safeUser
     });
   } catch (error) {
-    console.error(JSON.stringify({ event: 'login_failed', status: error.status || 500 }));
-    res.status(500).json({ success: false, error: 'Login failed due to a server error.' });
+    const failure = getAuthFailure(error, 'Login failed due to a server error.');
+    console.error(JSON.stringify({
+      event: 'login_failed',
+      status: failure.status,
+      errorCode: error?.errorCode || error?.code
+    }));
+    res.status(failure.status).json({ success: false, error: failure.error });
   }
 });
 

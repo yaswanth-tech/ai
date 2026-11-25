@@ -4,6 +4,8 @@
     "questions": [
       {
         "id": "hr_si_01",
+
+        "difficulty": "easy",
         "question": "Tell me about yourself.",
         "talking_points": [
           "background",
@@ -22,6 +24,8 @@
       },
       {
         "id": "hr_si_02",
+
+        "difficulty": "medium",
         "question": "Walk me through your resume.",
         "talking_points": [
           "roles",
@@ -39,6 +43,8 @@
       },
       {
         "id": "hr_si_03",
+
+        "difficulty": "hard",
         "question": "How would you describe yourself in three words?",
         "talking_points": [
           "adjectives",
@@ -55,6 +61,8 @@
       },
       {
         "id": "hr_si_04",
+
+        "difficulty": "easy",
         "question": "What is your biggest professional achievement so far?",
         "talking_points": [
           "achievements",
@@ -72,6 +80,8 @@
       },
       {
         "id": "hr_si_05",
+
+        "difficulty": "medium",
         "question": "Why did you choose this career path?",
         "talking_points": [
           "passion",
@@ -89,6 +99,8 @@
       },
       {
         "id": "hr_si_06",
+
+        "difficulty": "hard",
         "question": "What brings you to our company specifically?",
         "talking_points": [
           "company research",
@@ -106,6 +118,8 @@
       },
       {
         "id": "hr_si_07",
+
+        "difficulty": "easy",
         "question": "Where does your motivation come from?",
         "talking_points": [
           "drive",
@@ -123,6 +137,8 @@
       },
       {
         "id": "hr_si_08",
+
+        "difficulty": "medium",
         "question": "What are you most proud of in your career?",
         "talking_points": [
           "pride",
@@ -140,6 +156,8 @@
       },
       {
         "id": "hr_si_09",
+
+        "difficulty": "hard",
         "question": "What defines you as a professional?",
         "talking_points": [
           "integrity",
@@ -157,6 +175,8 @@
       },
       {
         "id": "hr_si_10",
+
+        "difficulty": "easy",
         "question": "What is one thing not on your resume that you want to mention?",
         "talking_points": [
           "hidden talent",
@@ -178,6 +198,8 @@
     "questions": [
       {
         "id": "hr_beh_01",
+
+        "difficulty": "medium",
         "question": "Tell me about a time you faced a conflict in a team.",
         "talking_points": [
           "conflict",
@@ -195,6 +217,8 @@
       },
       {
         "id": "hr_beh_02",
+
+        "difficulty": "hard",
         "question": "Give an example of a time you handled a difficult client.",
         "talking_points": [
           "patience",
@@ -212,6 +236,8 @@
       },
       {
         "id": "hr_beh_03",
+
+        "difficulty": "easy",
         "question": "Tell me about a time you failed.",
         "talking_points": [
           "failure",
@@ -229,6 +255,8 @@
       },
       {
         "id": "hr_beh_04",
+
+        "difficulty": "medium",
         "question": "Describe a time you went above and beyond.",
         "talking_points": [
           "initiative",
@@ -246,6 +274,8 @@
       },
       {
         "id": "hr_beh_05",
+
+        "difficulty": "hard",
         "question": "Tell me about a time you worked under pressure.",
         "talking_points": [
           "stress",
@@ -263,6 +293,8 @@
       },
       {
         "id": "hr_beh_06",
+
+        "difficulty": "easy",
         "question": "Describe a time you had to learn something new quickly.",
         "talking_points": [
           "adaptability",
@@ -280,6 +312,8 @@
       },
       {
         "id": "hr_beh_07",
+
+        "difficulty": "medium",
         "question": "Tell me about a time you persuaded someone.",
         "talking_points": [
           "persuasion",
@@ -297,6 +331,8 @@
       },
       {
         "id": "hr_beh_08",
+
+        "difficulty": "hard",
         "question": "Give an example of a team project that failed.",
         "talking_points": [
           "group failure",
@@ -314,6 +350,8 @@
       },
       {
         "id": "hr_beh_09",
+
+        "difficulty": "easy",
         "question": "Tell me about a time you led a team.",
         "talking_points": [
           "leadership",
@@ -331,6 +369,8 @@
       },
       {
         "id": "hr_beh_10",
+
+        "difficulty": "medium",
         "question": "Describe a situation where you had to change your plan.",
         "talking_points": [
           "pivot",
@@ -353,6 +393,8 @@
     "questions": [
       {
         "id": "hr_sit_01",
+
+        "difficulty": "hard",
         "question": "What would you do if a deadline is impossible to meet?",
         "talking_points": [
           "communication",
@@ -370,6 +412,8 @@
       },
       {
         "id": "hr_sit_02",
+
+        "difficulty": "easy",
         "question": "How would you handle a colleague who isn't pulling their weight?",
         "talking_points": [
           "checking in",
@@ -387,6 +431,8 @@
       },
       {
         "id": "hr_sit_03",
+
+        "difficulty": "medium",
         "question": "What if your manager gives you conflicting instructions?",
         "talking_points": [
           "clarification",
@@ -403,6 +449,8 @@
       },
       {
         "id": "hr_sit_04",
+
+        "difficulty": "hard",
         "question": "If you saw a security vulnerability, what's your first step?",
         "talking_points": [
           "report",
@@ -420,6 +468,8 @@
       },
       {
         "id": "hr_sit_05",
+
+        "difficulty": "easy",
         "question": "How do you handle a client who keeps changing requirements?",
         "talking_points": [
           "boundaries",
@@ -437,6 +487,8 @@
       },
       {
         "id": "hr_sit_06",
+
+        "difficulty": "medium",
         "question": "What if you disagree with the company's direction?",
         "talking_points": [
           "commitment",
@@ -454,6 +506,8 @@
       },
       {
         "id": "hr_sit_07",
+
+        "difficulty": "hard",
         "question": "How do you prioritize multiple urgent tasks?",
         "talking_points": [
           "impact",
@@ -471,6 +525,8 @@
       },
       {
         "id": "hr_sit_08",
+
+        "difficulty": "easy",
         "question": "What if you find a mistake in your own work after deployment?",
         "talking_points": [
           "report",
@@ -488,6 +544,8 @@
       },
       {
         "id": "hr_sit_09",
+
+        "difficulty": "medium",
         "question": "How would you handle a crisis in the middle of a project?",
         "talking_points": [
           "triage",
@@ -505,6 +563,8 @@
       },
       {
         "id": "hr_sit_10",
+
+        "difficulty": "hard",
         "question": "What if you are asked to do something unethical?",
         "talking_points": [
           "integrity",
@@ -527,6 +587,8 @@
     "questions": [
       {
         "id": "hr_sw_01",
+
+        "difficulty": "easy",
         "question": "What is your greatest strength?",
         "talking_points": [
           "strength",
@@ -543,6 +605,8 @@
       },
       {
         "id": "hr_sw_02",
+
+        "difficulty": "medium",
         "question": "What is your greatest weakness?",
         "talking_points": [
           "weakness",
@@ -560,6 +624,8 @@
       },
       {
         "id": "hr_sw_03",
+
+        "difficulty": "hard",
         "question": "How do you handle criticism?",
         "talking_points": [
           "listening",
@@ -577,6 +643,8 @@
       },
       {
         "id": "hr_sw_04",
+
+        "difficulty": "easy",
         "question": "What would your last manager say about you?",
         "talking_points": [
           "reliability",
@@ -594,6 +662,8 @@
       },
       {
         "id": "hr_sw_05",
+
+        "difficulty": "medium",
         "question": "What is one skill you are currently working on?",
         "talking_points": [
           "learning",
@@ -611,6 +681,8 @@
       },
       {
         "id": "hr_sw_06",
+
+        "difficulty": "hard",
         "question": "Are you a leader or a follower?",
         "talking_points": [
           "balance",
@@ -628,6 +700,8 @@
       },
       {
         "id": "hr_sw_07",
+
+        "difficulty": "easy",
         "question": "What makes you unique compared to other candidates?",
         "talking_points": [
           "unique",
@@ -645,6 +719,8 @@
       },
       {
         "id": "hr_sw_08",
+
+        "difficulty": "medium",
         "question": "How do you define success?",
         "talking_points": [
           "quality",
@@ -662,6 +738,8 @@
       },
       {
         "id": "hr_sw_09",
+
+        "difficulty": "hard",
         "question": "What is one thing you would change about your professional self?",
         "talking_points": [
           "growth",
@@ -678,6 +756,8 @@
       },
       {
         "id": "hr_sw_10",
+
+        "difficulty": "easy",
         "question": "What drives you when you encounter a repetitive task?",
         "talking_points": [
           "automation",
@@ -700,6 +780,8 @@
     "questions": [
       {
         "id": "hr_cg_01",
+
+        "difficulty": "medium",
         "question": "Where do you see yourself in 5 years?",
         "talking_points": [
           "growth",
@@ -717,6 +799,8 @@
       },
       {
         "id": "hr_cg_02",
+
+        "difficulty": "hard",
         "question": "Why do you want to leave your current job?",
         "talking_points": [
           "new challenges",
@@ -734,6 +818,8 @@
       },
       {
         "id": "hr_cg_03",
+
+        "difficulty": "easy",
         "question": "What kind of work environment do you thrive in?",
         "talking_points": [
           "collaboration",
@@ -751,6 +837,8 @@
       },
       {
         "id": "hr_cg_04",
+
+        "difficulty": "medium",
         "question": "What are your salary expectations?",
         "talking_points": [
           "market rate",
@@ -768,6 +856,8 @@
       },
       {
         "id": "hr_cg_05",
+
+        "difficulty": "hard",
         "question": "What is your dream job?",
         "talking_points": [
           "innovation",
@@ -785,6 +875,8 @@
       },
       {
         "id": "hr_cg_06",
+
+        "difficulty": "easy",
         "question": "How do you stay updated with industry trends?",
         "talking_points": [
           "blogs",
@@ -803,6 +895,8 @@
       },
       {
         "id": "hr_cg_07",
+
+        "difficulty": "medium",
         "question": "What if you don't get this job?",
         "talking_points": [
           "resilience",
@@ -820,6 +914,8 @@
       },
       {
         "id": "hr_cg_08",
+
+        "difficulty": "hard",
         "question": "What do you want to achieve in your first 90 days?",
         "talking_points": [
           "listen",
@@ -837,6 +933,8 @@
       },
       {
         "id": "hr_cg_09",
+
+        "difficulty": "easy",
         "question": "How do you want to be remembered by your colleagues?",
         "talking_points": [
           "helpful",
@@ -854,6 +952,8 @@
       },
       {
         "id": "hr_cg_10",
+
+        "difficulty": "medium",
         "question": "Are you willing to relocate or travel?",
         "talking_points": [
           "flexibility",

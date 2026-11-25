@@ -8,6 +8,7 @@ const runSecureUploadTests = require('./secureUpload.test');
 const runUploadValidationTests = require('./uploadValidation.test');
 const runJobMatchEvaluatorTests = require('./jobMatchEvaluator.test');
 const runSafeRouteLoggingTests = require('./safeRouteLogging.test');
+const runInterviewFlowTests = require('./interviewFlow.test');
 
 async function main() {
   console.log('====================================================');
@@ -27,6 +28,7 @@ async function main() {
     { name: 'Upload Boundary & Signature Validation Suite', fn: runUploadValidationTests },
     { name: 'Explainable JD Match Suite', fn: runJobMatchEvaluatorTests },
     { name: 'Safe Route Logging Suite', fn: runSafeRouteLoggingTests },
+    { name: 'Mock Interview Flow Suite', fn: runInterviewFlowTests },
     { name: 'Resume Export (PDF & DOCX) Suite', fn: runResumeExportTests }
   ];
 

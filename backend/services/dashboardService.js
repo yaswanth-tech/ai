@@ -52,7 +52,10 @@ async function getDashboardStats(userId) {
   if (interview) {
     const isCompleted = interview.status === 'COMPLETED';
     interviewStatus = isCompleted ? 'Completed' : 'In Progress';
-    const totalPossible = (interview.attempts && interview.attempts.length > 0) ? (interview.attempts.length * 10) : 50;
+    const plannedQuestionCount = interview.plannedQuestionCount ||
+      (Array.isArray(interview.plannedQuestions) ? interview.plannedQuestions.length : 0) ||
+      (interview.attempts && interview.attempts.length > 0 ? interview.attempts.length : 5);
+    const totalPossible = plannedQuestionCount * 10;
     interviewScore = Math.min(100, Math.round(((interview.totalScore || 0) / totalPossible) * 100));
   }
 

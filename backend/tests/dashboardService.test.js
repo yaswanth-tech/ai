@@ -127,6 +127,16 @@ async function runDashboardServiceTests() {
       attempted: true
     });
     assert.strictEqual(stats.overall.score, 0);
+
+    prisma.interviewSession.findFirst = async () => ({
+      status: 'COMPLETED',
+      totalScore: 20,
+      plannedQuestionCount: 8,
+      attempts: [{ score: 10 }, { score: 10 }]
+    });
+    const plannedInterviewStats = await getDashboardStats('user-1');
+    assert.strictEqual(plannedInterviewStats.modules.interview.score, 25);
+    assert.strictEqual(plannedInterviewStats.modules.interview.status, 'Completed');
     console.log('✔ Dashboard resume, score, generated file, and report data passed');
   } finally {
     methods.forEach(([model, method], index) => {

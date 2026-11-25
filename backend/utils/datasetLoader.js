@@ -41,6 +41,11 @@ function getTechnicalQuestions(role) {
   }, []);
 }
 
+function getAllTechnicalQuestions() {
+  if (!technicalData) loadDatasets();
+  return technicalData.reduce((acc, current) => acc.concat(current.questions), []);
+}
+
 /**
  * Get questions for a specific HR category or all HR questions.
  * @param {string} categoryOrRole e.g., "Behavioral" or "General"
@@ -83,6 +88,7 @@ function getQuestionById(id) {
 module.exports = {
   loadDatasets,
   getTechnicalQuestions,
+  getAllTechnicalQuestions,
   getHRQuestions,
   getQuestionById
 };

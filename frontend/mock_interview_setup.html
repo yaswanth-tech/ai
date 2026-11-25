@@ -1,260 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Mock Interview Setup — ASCEND</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Mock Interview Setup | ASCEND</title>
+  <link rel="stylesheet" href="css/app-theme.css">
   <link rel="stylesheet" href="css/navbar.css">
   <style>
     :root {
-      --primary: #6366f1;
-      --primary-hover: #4f46e5;
-      --bg: #f8fafc;
-      --card-bg: #ffffff;
-      --text-main: #1e293b;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
-
-
+      color-scheme: light;
+      --ink: #17233b;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --brand: #4859ca;
+      --brand-dark: #3343ac;
+      --surface: #fff;
+      --page: #f5f7fb;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background-color: var(--bg);
-      color: var(--text-main);
-      display: block;
-      min-height: 100vh;
-    }
-
-    /* MAIN CONTENT */
-    .main {
-      padding: 60px 40px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start; width: 100%;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 640px;
-    }
-
-    header {
-      margin-bottom: 32px;
-    }
-
-    h1 {
-      font-size: 28px;
-      font-weight: 700;
-      color: #0f172a;
-      margin-bottom: 8px;
-    }
-
-    .subtitle {
-      color: var(--text-muted);
-      font-size: 16px;
-    }
-
-    .setup-card {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-    }
-
-    .form-group {
-      margin-bottom: 24px;
-    }
-
-    .form-group:last-of-type {
-      margin-bottom: 32px;
-    }
-
-    label {
-      display: block;
-      font-size: 14px;
-      font-weight: 600;
-      color: #334155;
-      margin-bottom: 8px;
-    }
-
-    select {
-      width: 100%;
-      padding: 12px 16px;
-      font-size: 15px;
-      font-family: inherit;
-      color: var(--text-main);
-      background-color: #fcfdfe;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      outline: none;
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 16px center;
-      background-size: 16px;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    select:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-    }
-
-    .start-btn {
-      width: 100%;
-      padding: 14px;
-      background-color: var(--primary);
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.2s, transform 0.1s;
-    }
-
-    .start-btn:hover {
-      background-color: var(--primary-hover);
-    }
-
-    .start-btn:active {
-      transform: scale(0.99);
-    }
-
-    @media (max-width: 768px) {
-      .main {
-        padding: 40px 20px; width: 100%;
-      }
-    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--page); color: var(--ink); font-family: Inter, system-ui, sans-serif; }
+    .page { width: min(1050px, calc(100% - 32px)); margin: 48px auto; }
+    .intro { margin-bottom: 26px; }
+    .eyebrow { color: var(--brand); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 8px 0; font-size: clamp(1.75rem, 4vw, 2.45rem); }
+    .intro p { color: var(--muted); line-height: 1.6; margin: 0; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(250px, .8fr); gap: 20px; align-items: start; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 12px 35px #1a2a4b0d; padding: 26px; }
+    .fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    label { display: block; font-size: .86rem; font-weight: 700; margin-bottom: 7px; }
+    select { appearance: none; width: 100%; min-height: 46px; border: 1px solid #cbd5e1; border-radius: 10px; padding: 10px 38px 10px 12px; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%2364758b' stroke-width='2'%3E%3Cpath d='m5 7 5 5 5-5'/%3E%3C/svg%3E") right 12px center/18px no-repeat; color: var(--ink); font: inherit; }
+    select:focus-visible, button:focus-visible { outline: 3px solid #8793ff; outline-offset: 2px; }
+    .summary { background: linear-gradient(145deg, #f3f5ff, #f8faff); }
+    .summary h2 { font-size: 1.08rem; margin: 0 0 5px; }
+    .summary .estimate { color: var(--brand); font-size: 1.22rem; font-weight: 800; margin: 12px 0 20px; }
+    .summary-list { display: grid; gap: 12px; color: var(--muted); font-size: .92rem; }
+    .summary-list strong { color: var(--ink); }
+    .start { width: 100%; min-height: 48px; margin-top: 24px; border: 0; border-radius: 11px; background: var(--brand); color: #fff; cursor: pointer; font: inherit; font-weight: 750; }
+    .start:hover { background: var(--brand-dark); }
+    .start:disabled { cursor: wait; opacity: .7; }
+    .error { min-height: 1.4em; margin: 12px 0 0; color: #b42318; font-size: .9rem; }
+    @media (max-width: 700px) { .page { margin: 28px auto; } .layout { grid-template-columns: 1fr; } }
+    @media (max-width: 420px) { .fields { grid-template-columns: 1fr; gap: 14px; } .card { padding: 20px; } }
   </style>
-  <link rel="stylesheet" href="css/app-theme.css">
 </head>
-
 <body>
-<div id="app-navbar"></div>
-<main class="main">
-    <div class="container">
-      <header>
-        <h1>AI Mock Interview Setup</h1>
-        <p class="subtitle">Personalize your interview experience to match your target role.</p>
-      </header>
-
-      <div class="setup-card">
-        <!-- 1. Interview Type (Primary Control) -->
-        <div class="form-group">
-          <label for="type">Interview Type</label>
-          <select id="type" onchange="toggleFormFlow()">
-            <option value="TECHNICAL">Technical Interview</option>
-            <option value="HR">HR Interview</option>
-          </select>
+  <div id="app-navbar"></div>
+  <main class="page">
+    <header class="intro">
+      <div class="eyebrow">Interview practice</div>
+      <h1>Set up your mock interview</h1>
+      <p>Choose a format that matches the role you are preparing for. Your interview plan and time limit are saved securely.</p>
+    </header>
+    <div class="layout">
+      <form class="card" id="setup-form">
+        <div class="fields">
+          <div>
+            <label for="type">Interview type</label>
+            <select id="type" name="type">
+              <option value="TECHNICAL">Technical</option>
+              <option value="HR">HR / behavioral</option>
+            </select>
+          </div>
+          <div id="role-field">
+            <label for="role">Target role</label>
+            <select id="role" name="role">
+              <option>Frontend Developer</option>
+              <option>Backend Developer</option>
+              <option>Full Stack Developer</option>
+              <option>Data Analyst</option>
+              <option>Python Developer</option>
+              <option>Java Backend Developer</option>
+            </select>
+          </div>
+          <div>
+            <label for="experience">Experience level</label>
+            <select id="experience" name="experience">
+              <option value="fresher">Fresher</option>
+              <option value="1-3">1–3 years</option>
+              <option value="3+">3+ years</option>
+            </select>
+          </div>
+          <div>
+            <label for="difficulty">Difficulty</label>
+            <select id="difficulty" name="difficulty">
+              <option value="easy">Easy</option>
+              <option value="medium" selected>Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+          <div>
+            <label for="duration">Duration</label>
+            <select id="duration" name="duration">
+              <option value="10">10 minutes</option>
+              <option value="20" selected>20 minutes</option>
+              <option value="30">30 minutes</option>
+            </select>
+          </div>
         </div>
-
-        <!-- 2. Target Role (Conditional) -->
-        <div class="form-group" id="roleGroup">
-          <label for="role">Target Role</label>
-          <select id="role">
-            <option value="Frontend Developer">Frontend Developer</option>
-            <option value="Backend Developer">Backend Developer</option>
-            <option value="Full Stack Developer">Full Stack Developer</option>
-            <option value="Data Analyst">Data Analyst</option>
-          </select>
+        <button class="start" id="start-button" type="submit">Continue to interview lobby</button>
+        <p class="error" id="setup-error" role="alert" aria-live="polite"></p>
+      </form>
+      <aside class="card summary" aria-live="polite">
+        <h2>Your interview</h2>
+        <p class="estimate" id="summary-estimate">20 min ≈ 8 questions</p>
+        <div class="summary-list">
+          <div>Format: <strong id="summary-type">Technical</strong></div>
+          <div>Role: <strong id="summary-role">Frontend Developer</strong></div>
+          <div>Experience: <strong id="summary-experience">Fresher</strong></div>
+          <div>Difficulty: <strong id="summary-difficulty">Medium</strong></div>
+          <div>Question count: <strong id="summary-count">8, including your introduction</strong></div>
         </div>
-
-        <!-- 3. Experience Level -->
-        <div class="form-group">
-          <label for="experience">Experience Level</label>
-          <select id="experience">
-            <option value="fresher">Fresher</option>
-            <option value="1-3">1 – 3 Years</option>
-            <option value="3+">3+ Years</option>
-          </select>
-        </div>
-
-        <!-- 4. Difficulty Level -->
-        <div class="form-group">
-          <label for="difficulty">Difficulty Level</label>
-          <select id="difficulty">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-          </select>
-        </div>
-
-        <!-- 5. Duration -->
-        <div class="form-group">
-          <label for="duration">Duration</label>
-          <select id="duration">
-            <option value="10">10 Minutes</option>
-            <option value="20">20 Minutes</option>
-            <option value="30">30 Minutes</option>
-          </select>
-        </div>
-
-        <button class="start-btn" onclick="startInterview()">Start Interview</button>
-      </div>
+      </aside>
     </div>
   </main>
-
   <script src="js/userContext.js"></script>
-  <script>
-    // Set username from local storage
-    document.addEventListener('DOMContentLoaded', () => {
-      // User identity handled by userContext.js
-
-      // Initialize form flow
-      toggleFormFlow();
-    });
-
-    function toggleFormFlow() {
-      const type = document.getElementById('type').value;
-      const roleGroup = document.getElementById('roleGroup');
-      const roleSelect = document.getElementById('role');
-
-      if (type === 'HR') {
-        roleGroup.style.display = 'none';
-        roleSelect.value = ''; // Clear stale value as per constraint
-      } else {
-        roleGroup.style.display = 'block';
-        // Auto-select first option if empty
-        if (!roleSelect.value && roleSelect.options.length > 0) {
-          roleSelect.selectedIndex = 0;
-        }
-      }
-    }
-
-    function startInterview() {
-      const type = document.getElementById('type').value;
-      const role = document.getElementById('role').value;
-
-      // Validation logic adapt to visibility state
-      if (type === 'TECHNICAL' && !role) {
-        alert('Please select a Target Role for the Technical Interview.');
-        return;
-      }
-
-      const config = {
-        role: type === 'HR' ? 'General' : role, // Use 'General' as fallback for backend consistency
-        experience: document.getElementById('experience').value,
-        type: type,
-        difficulty: document.getElementById('difficulty').value,
-        duration: document.getElementById('duration').value
-      };
-
-      localStorage.setItem('interview_config', JSON.stringify(config));
-      window.location.href = 'mock_interview_session.html';
-    }
-  </script>
   <script src="js/navbar.js"></script>
-</body>
+  <script>
+    (() => {
+      const form = document.getElementById('setup-form');
+      const type = document.getElementById('type');
+      const role = document.getElementById('role');
+      const roleField = document.getElementById('role-field');
+      const duration = document.getElementById('duration');
+      const questionCounts = { 10: 5, 20: 8, 30: 12 };
 
+      function updateSummary() {
+        const isTechnical = type.value === 'TECHNICAL';
+        roleField.hidden = !isTechnical;
+        const count = questionCounts[duration.value];
+        document.getElementById('summary-estimate').textContent = `${duration.value} min ≈ ${count} questions`;
+        document.getElementById('summary-type').textContent = isTechnical ? 'Technical' : 'HR / behavioral';
+        document.getElementById('summary-role').textContent = isTechnical ? role.value : 'General';
+        document.getElementById('summary-experience').textContent = document.getElementById('experience').selectedOptions[0].text;
+        document.getElementById('summary-difficulty').textContent = document.getElementById('difficulty').selectedOptions[0].text;
+        document.getElementById('summary-count').textContent = `${count}, including your introduction`;
+      }
+
+      form.addEventListener('change', updateSummary);
+      form.addEventListener('submit', async event => {
+        event.preventDefault();
+        const button = document.getElementById('start-button');
+        const error = document.getElementById('setup-error');
+        error.textContent = '';
+        button.disabled = true;
+        button.textContent = 'Preparing your interview…';
+        try {
+          const config = {
+            type: type.value,
+            role: type.value === 'TECHNICAL' ? role.value : 'General',
+            experience: document.getElementById('experience').value,
+            difficulty: document.getElementById('difficulty').value,
+            duration: duration.value
+          };
+          const response = await UserContext.fetchWithAuth('/api/interview/start-session', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(config)
+          });
+          const result = await response.json();
+          if (!response.ok || !result.success) throw new Error(result.error || 'Unable to prepare the interview.');
+          localStorage.setItem('interview_config', JSON.stringify(config));
+          localStorage.setItem('interview_session_id', result.sessionId);
+          window.location.assign('mock_interview_session.html');
+        } catch (requestError) {
+          if (!UserContext.isSessionExpired(requestError)) error.textContent = requestError.message || 'Unable to prepare the interview. Please try again.';
+        } finally {
+          button.disabled = false;
+          button.textContent = 'Continue to interview lobby';
+        }
+      });
+      updateSummary();
+    })();
+  </script>
+</body>
 </html>

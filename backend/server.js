@@ -1,9 +1,9 @@
-require("dotenv").config();
+const path = require("path");
+require("dotenv").config({ path: path.join(__dirname, ".env") });
 const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 const fs = require("fs");
-const path = require("path");
 const { apiLimiter } = require("./middleware/rateLimiter");
 const { requireAuth, requireCandidate } = require('./middleware/authMiddleware');
 const prisma = require('./utils/prismaClient');
@@ -40,6 +40,12 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use('/api', apiLimiter);
 
 app.get('/api/health', async (req, res) => {
+  if (!process.env.DATABASE_URL) {
+    return res.status(503).json({
+      success: false,
+      error: 'Database configuration is missing. Set DATABASE_URL in backend/.env.'
+    });
+  }
   try {
     await prisma.$queryRaw`SELECT 1`;
     res.json({ success: true, database: 'connected' });
